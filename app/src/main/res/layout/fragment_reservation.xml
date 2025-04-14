@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ReservationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearHead"
+        android:background="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        style="@style/linearLayoutBooking">
+
+        <TextView
+            android:layout_margin="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/textViewTitle"
+            android:text="@string/textReservation" />
+        
+        <ImageView
+            android:src="@drawable/ic_notification"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="27dp"
+            android:layout_height="27dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearView"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/linearHead"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:ignore="UselessLeaf">
+
+        <TextView
+            android:id="@+id/onActive"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/isActive"
+            style="@style/bgReservation" />
+
+        <TextView
+            android:id="@+id/offActive"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/isActive"
+            style="@style/offBgReservation" />
+
+        <TextView
+            android:id="@+id/onPast"
+            android:visibility="gone"
+            android:layout_marginStart="150dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/textPast"
+            style="@style/bgReservation"/>
+
+        <TextView
+            android:id="@+id/offPast"
+            android:layout_marginStart="150dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/textPast"
+            style="@style/offBgReservation"/>
+
+
+        <TextView
+            android:id="@+id/onCanceled"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/onPast"
+            android:text="@string/textCanceled"
+            style="@style/bgReservation"/>
+
+        <TextView
+            android:id="@+id/offCanceled"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/onPast"
+            android:text="@string/textCanceled"
+            style="@style/offBgReservation"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@id/linearView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
